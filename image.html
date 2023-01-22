@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>Image Move</title>
+<script type="text/javascript">
+
+function move_img(str) {
+
+var step=70;
+switch (str) {
+case"down":
+var x=document.getElementById('a').offsetTop;
+x=x+step;
+document.getElementById('a').style.top=x+"px";
+break;
+
+case"up":
+var x=document.getElementById('a').offsetTop;
+x=x-step;
+document.getElementById('a').style.top=x+"px";
+break;
+
+case"left":
+var y=document.getElementById('a').offsetLeft;
+y=y-step;
+document.getElementById('a').style.left=y+"px";
+break;
+
+case"right":
+var y=document.getElementById('a').offsetLeft;
+y=y+step;
+document.getElementById('a').style.left=y+"px";
+break;
+}
+}
+</script>
+</head>
+<body>
+<center><img src=flower.jpg id='a' style="position:absolute; top:100; left:100">
+<input type=button onclick=move_img('up') value="up">
+<input type=button onclick=move_img('down') value='down'>
+<input type=button onclick=move_img('right') value='right'>
+<input type=button onclick=move_img('left') value='left'></center>
+
+</body>
+</html>

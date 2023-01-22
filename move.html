@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>Hello World</title>
+<script type="text/javascript">
+   var topLayer="four";
+   function mover(toTop)
+{
+document.getElementById(topLayer).style.zIndex="0";
+document.getElementById(toTop).style.zIndex="1";
+topLayer=toTop;
+}
+</script>
+<style type="text/css">
+#first {
+border:solid thick black;
+background-color:red;
+padding:12px;
+width:200px;
+height:100px;
+position:absolute;
+z-index:1;
+left:200;
+top:100;
+}
+
+#second{
+border:solid thick black;
+background-color:pink;
+padding:12px;
+width:200px;
+height:100px;
+position:absolute;
+z-index:1;
+left:220;
+top:120;
+}
+
+#third {
+border:solid thick black;
+background-color:blue;
+padding:12px;
+width:200px;
+height:100px;
+position:absolute;
+z-index:1;
+left:240;
+top:140;
+}
+
+#four {
+border:solid thick black;
+background-color:green;
+padding:12px;
+width:200px;
+height:100px;
+position:absolute;
+z-index:1;
+left:260;
+top:160;
+}
+
+</style>
+</head>
+<body>
+<p id=first onclick=mover('first');>This is 4th layer</p>
+<p id=second onclick=mover('second');>This is 3rd layer</p>
+<p id=third onclick=mover('third');>This is 2nd layer</p>
+<p id=four onclick=mover('four');>This is 1st layer</p>
+</body>
+</html>
+
+
+

@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>Basic Form</title>
+<script type="text/javascript">
+function change(id)
+{
+if (id=='one')
+{
+ele=document.getElementById(id).style;
+ele.color="red";
+ele.fontFamily="algerian";
+ele.fontSize="15px";
+}
+
+if (id=='two')
+{
+ele=document.getElementById(id).style;
+ele.color="blue";
+ele.fontFamily="Times New Roman";
+ele.fontSize="15px";
+}
+
+if (id==three)
+{
+ele=document.getElementById(id).style;
+ele.color="pink";
+ele.fontFamily="broadway";
+ele.fontSize="15px";
+}
+}
+function change_back(id)
+{
+ele=document.getElementById(id).style;
+ele.color="black";
+ele.fontFamily="arial";
+ele.fontSize="10px";
+}
+</script>
+<style type="text/css">
+p{
+ele.color="black";
+ele.fontFamily="arial";
+ele.fontSize="10px";
+}
+</style>
+</head>
+<body>
+<p>i am <span id="one" onmouseover="change(id);" onmouserout="change_back(id);">jayashree</span><p>
+</body>
+</html>
