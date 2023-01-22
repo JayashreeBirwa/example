@@ -26,4 +26,32 @@ export function Biodata() {
     </>
     )
     }
+    
+    
+    
+    App.js
+
+import { Routes, Route } from "react-router-dom";
+import { Home } from "./components/Home"
+import { Biodata } from "./components/Biodata"
+import { Achievement } from "./components/Achievement"
+import { Navbar } from "./components/Navbar"
+import { Qualifiaction } from "./components/Qualification";
+
+function App() {
+  return (
+    <>
+    <Navbar />
+    <Routes>
+      <Route path="/" element={< Home />}></Route> 
+      <Route path="Biodata" element={<  Biodata  />}></Route>
+      <Route path="Achievement" element={< Achievement />}></Route>
+      <Route path="Qualification" element={< Qualifiaction />}></Route>
+    </Routes>
+    </>
+  )
+}
+      
+export default App;
+
 
